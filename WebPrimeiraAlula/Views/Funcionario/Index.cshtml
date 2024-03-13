@@ -1,0 +1,74 @@
+﻿@model IEnumerable<WebPrimeiraAlula.Models.FuncionarioModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-success text-opacity-75">Lista Funcionarios</h1>
+
+<button type="button" class="btn btn-info m-2 btn-sm"><a asp-action="Create" class="fw-bold text-white text-decoration-none">Novo Funcionario</a></button>
+
+<table class="table bg-light">
+    <thead>
+        <tr class="text-success text-opacity-75">
+            <th>
+                @Html.DisplayNameFor(model => model.Cpf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataNascimento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Celular)
+            </th>
+         
+            <th>
+                @Html.DisplayNameFor(model => model.Ativo)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cpf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataNascimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Celular)
+            </td>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.Ativo)
+            </td>
+           
+            <td >
+                <button type="button" class="btn btn-primary btn-sm">@Html.ActionLink("Editar", "Edit", new {  valor=item.Cpf,   }, new { @class = "text-white text-decoration-none fw-bold" })</button> |
+                <button type="button" class="btn btn-warning btn-sm">@Html.ActionLink("Detalhes", "Details", new {  valor=item.Cpf  }, new { @class = "text-white text-decoration-none fw-bold" })</button> |
+                <button type="button" class="btn btn-danger btn-sm">@Html.ActionLink("Excluir", "Delete", new { valor=item.Cpf  }, new { @class = "text-white text-decoration-none fw-bold" })</button>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

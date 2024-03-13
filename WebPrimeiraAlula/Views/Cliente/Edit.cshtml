@@ -1,0 +1,22 @@
+﻿@model WebPrimeiraAlula.Models.ClienteModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1 class="text-success text-opacity-75">Editar Cliente</h1>
+
+<hr />
+<div class="row mt-1">
+    <div class="col-md-12 text-success text-opacity-75 fw-bold">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <partial name="_Formulario" />
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar para lista</a>
+</div>
+

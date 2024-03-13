@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\WebPrimeiraAlula",
+    "\\WebPrimeiraAlula\\Controllers",
+    "\\WebPrimeiraAlula\\Views",
+    "\\WebPrimeiraAlula\\Views\\Cliente",
+    "\\WebPrimeiraAlula\\Views\\Funcionario",
+    "\\WebPrimeiraAlula\\wwwroot",
+    "\\WebPrimeiraAlula\\wwwroot\\css"
+  ],
+  "SelectedNode": "\\WebPrimeiraAlula\\Views\\Cliente\\Index.cshtml",
+  "PreviewInSolutionExplorer": false
+}

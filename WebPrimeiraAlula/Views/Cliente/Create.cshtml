@@ -1,0 +1,22 @@
+﻿@model WebPrimeiraAlula.Models.ClienteModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<h4 class="text-success text-opacity-75">Cadastro de Cliente</h4>
+<hr />
+<div class="row">
+    <div class="col-md-12 text-success text-opacity-75 fw-bold">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <partial name="_Formulario" />
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar para lista</a>
+</div>
+
